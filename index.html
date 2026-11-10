@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Mi Web está al Aire!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e6fffa;
+            color: #234e52;
+            border: 1px solid #b2f5ea;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        button {
+            background-color: #4c51bf;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background-color: #434190;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #38a169;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <span class="badge">🚀 Estado: En línea</span>
+        <h1>¡Hola, Mundo!</h1>
+        <p>Si estás viendo esta página, significa que tus archivos y tu hosting están configurados correctamente y tu sitio web ya está al aire.</p>
+        
+        <button id="btnClick">Haz clic aquí para probar JS</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        const button = document.getElementById('btnClick');
+        const message = document.getElementById('message');
+
+        button.addEventListener('click', () => {
+            message.textContent = '¡El JavaScript también funciona correctamente! 🎉';
+        });
+    </script>
+</body>
+</html>
